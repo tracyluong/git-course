@@ -1,0 +1,17 @@
+1. Giải thích các câu lệnh:
+git init : khởi tạo một thư mục Git mới (Working Directory), chứa các file tạo mới chưa được commit (untracked files)
+git add <file_name> : thêm một file vào vùng Staging
+git add . : thêm toàn bộ file vào vùng Staging
+git commit -m "message" : chuyển tất cả các file đang ở trạng thái sẵn sàng commit (staging) sang trạng thái commit (tạo một phiên bản - Repository)
+
+2. Trong 1 folder lesson-2, thao tác một loạt các lệnh sau:
+  a. Tạo 3 file: file1, file2, file3
+  b. Chạy lệnh: git init
+  c. Chạy lệnh: git commit -m"init project"
+  d. Chạy lệnh: git add file1
+  e. Chạy lệnh: git commit -m"add file1"
+  f. Chạy lệnh: git add file
+
+Working Directory: không có file nào
+Staging Area: file2, file3
+Repository: file1 
