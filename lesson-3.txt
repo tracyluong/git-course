@@ -1,0 +1,96 @@
+1. Giải thích các câu lệnh:
+git commit --amend : Lệnh này được sử dụng để chỉnh sửa commit gần nhất. 
+Khi chạy lệnh này, Git sẽ mở trình soạn thảo mặc định để ta có thể chỉnh sửa lại message của commit trước đó hoặc thêm/thay đổi nội dung commit.
+
+git commit --amend -m”<message>” : Đây là phiên bản rút gọn của git commit --amend, cho phép sửa message của commit gần nhất mà không cần mở trình soạn thảo.
+Nó thay thế toàn bộ message của commit trước đó bằng nội dung mới được cung cấp trong "<message>".
+
+git restore --staged <file> : Đưa từ vùng staging về working directory.
+
+git reset HEAD~1 : Đưa từ một commit vùng repository về working directory (uncommit).
+
+2. Trong 1 folder lesson-3 mới được tạo, liệt kê các file theo từng vùng, liệt kê các commit và message tương ứng sau khi thao tác một loạt các lệnh sau:
+a. Tạo 3 file: file1, file2, file3
+Local: file1, file2, file3
+Working Directory: không có gì
+Staging Area: không có gì
+Repository: không có gì
+
+b. Chạy lệnh: git init
+Working Directory: file1, file2, file3
+Staging Area: không có gì
+Repository: không có gì
+
+c. Chạy lệnh: git commit -m”init project”
+Working Directory: file1, file2, file3
+Staging Area: không có gì
+Repository: Commit 1: "init project" (rỗng, không chứa file nào)
+
+d. Chạy lệnh: git add file1
+Working Directory: file1, file2, file3
+Staging Area: file1
+Repository: Commit 1: "init project" (rỗng, không chứa file nào)
+
+e. Chạy lệnh: git commit -m”add file”
+Working Directory: file1, file2, file3
+Staging Area: không có gì
+Repository: file1
+            Commit 1: "init project" (rỗng, không chứa file nào)
+            Commit 2: "add file" (chứa file1)
+
+f. Chạy lệnh: git add .
+Working Directory: file1, file2, file3
+Staging Area: file2, file3
+Repository: file1
+            Commit 1: "init project" (rỗng, không chứa file nào)
+            Commit 2: "add file" (chứa file1)
+
+g. Chạy lệnh: git restore --staged file2
+Working Directory: file1, file2, file3
+Staging Area: file3
+Repository: file1
+            Commit 1: "init project" (rỗng, không chứa file nào)
+            Commit 2: "add file" (chứa file1)
+
+h. Chạy lệnh: git commit -m”add all files”
+Working Directory: file1, file2, file3
+Staging Area: không có gì
+Repository: file1, file3
+            Commit 1: "init project" (rỗng, không chứa file nào)
+            Commit 2: "add file" (chứa file1)
+            Commit 3: "add all files" (chứa file3)
+
+i. Chạy lệnh: git reset HEAD~1
+Working Directory: file1, file2, file3
+Staging Area: file3
+Repository: file1
+            Commit 1: "init project" (rỗng, không chứa file nào)
+            Commit 2: "add file" (chứa file1)
+
+3. Trong 1 folder lesson-3-git mới được tạo ra, liệt kê các file theo từng vùng sau khi thao tác các lệnh sau:
+a. Chạy lệnh git init
+Working Directory: không có gì
+Staging Area: không có gì
+Repository: không có gì
+
+b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+Working Directory: file1, file2, file3
+Staging Area: không có gì
+Repository: không có gì
+
+c. Thêm file .gitignore, thêm vào 2 dòng:
+  i. file1.txt
+  ii. oops/
+Working Directory: file1, file2, file3, .gitignore
+Staging Area: không có gì
+Repository: không có gì
+
+d. Chạy lệnh: git add .
+Working Directory: file1, file2, file3, .gitignore
+Staging Area: file2, .gitignore
+Repository: không có gì
+
+e. Chạy lệnh: git commit -m"init project" 
+Working Directory: file1, file2, file3, .gitignore
+Staging Area: không có gì
+Repository: file2, .gitignore
