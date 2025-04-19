@@ -1,0 +1,45 @@
+Câu 1: Cấu trúc DOM cơ bản của một trang web bao gồm các thẻ gì?
+
+1. <!DOCTYPE html>: Khai báo loại tài liệu (HTML5).
+
+2. <html>: Thẻ gốc bao ngoài toàn bộ nội dung HTML.
+
+3. <head>: Chứa metadata, tiêu đề, link tới CSS/JS,...
+    Trong <head> thường bao gồm các thẻ con:
+        <title>:	Tiêu đề hiển thị trên tab trình duyệt
+        <meta>:	Metadata (mã hóa ký tự, mô tả, từ khóa, responsive,...)
+        <link>:	Liên kết đến file ngoài như CSS, favicon,...
+        <script>:	Chèn JavaScript (có thể nằm trong hoặc ngoài)
+        <style>:	CSS nội dòng
+        <base>:	Thiết lập URL gốc cho tất cả link tương đối
+
+4. <body>: Chứa toàn bộ nội dung hiển thị trên trang như văn bản, ảnh, form, table,...
+    Trong <body> thường bao gồm các thẻ con: 
+        <h1> - <h6>:	Các tiêu đề (h1 là lớn nhất)
+        <p>:	Đoạn văn bản
+        <div>:	Khối chứa (block container)
+        <span>:	Khối nội dòng (inline)
+        <a>:	Liên kết
+        <img>:	Hình ảnh
+        <ul>, <ol>, <li>:	Danh sách
+        <table>:	Bảng dữ liệu
+        <form>, <input>, <button>, <label>, <select>, <textarea>:	Biểu mẫu
+        <section>, <article>, <aside>, <header>, <footer>, <main>:	Thẻ HTML5 dùng phân chia bố cục
+        <script>:	(cũng có thể nằm trong <body>)
+
+
+Câu 2: Hãy mô tả cấu trúc html của 1 bảng (table)
+
+1. <table>: Thẻ bao ngoài bảng.
+
+2. <thead>: Phần đầu bảng (tiêu đề các cột).
+
+3. <tbody>: Phần thân bảng (nội dung).
+
+4. <tfoot>: Phần chân bảng, thường dùng để hiển thị tổng số, ghi chú,...
+
+5. <tr>: Table row (hàng).
+
+6. <th>: Table header (ô tiêu đề, thường in đậm và căn giữa).
+
+7. <td>: Table data (ô dữ liệu).
